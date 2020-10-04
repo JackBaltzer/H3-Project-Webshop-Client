@@ -16,26 +16,26 @@ import { CategoriesComponent } from './admin/categories';
 import { LoginsComponent } from './admin/logins';
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        AppRoutingModule
-    ],
-    declarations: [ 
-        AppComponent,
-        HomeComponent,
-        LoginComponent,
-        CategoriesComponent,
-        LoginsComponent
-    ],
-    providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+	imports: [
+		BrowserModule,
+		ReactiveFormsModule,
+		HttpClientModule,
+		AppRoutingModule
+	],
+	declarations: [
+		AppComponent,
+		HomeComponent,
+		LoginComponent,
+		CategoriesComponent,
+		LoginsComponent
+	],
+	providers: [
+		{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+		{ provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
-        // provider used to create fake backend
-        // fakeBackendProvider
-    ],
-    bootstrap: [AppComponent]
+		// provider used to create fake backend
+		// fakeBackendProvider
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
