@@ -12,4 +12,6 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
 }
