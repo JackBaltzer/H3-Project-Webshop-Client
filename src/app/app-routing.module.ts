@@ -26,6 +26,9 @@ const routes: Routes = [
                 data: {
                     roleAccess: 100
                 }
+            },
+            {
+                path: '**', redirectTo: '/'
             }
         ]
     },

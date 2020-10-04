@@ -15,6 +15,10 @@ export class AppComponent {
         this.authenticationService.user.subscribe(x => this.user = x);
     }
 
+    get isLoggedIn(){
+        return this.user != null;
+    }
+
     get isAdmin() {
         return this.user && this.user.roleAccess === 100;
     }
