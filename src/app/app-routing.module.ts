@@ -6,7 +6,7 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { CategoriesComponent } from './admin/categories';
 import { LoginsComponent } from './admin/logins';
-import { Role } from './_models';
+
 
 const routes: Routes = [
     {
@@ -16,7 +16,7 @@ const routes: Routes = [
                 component: CategoriesComponent,
                 canActivate: [AuthGuard],
                 data: {
-                    roles: [Role.Admin]
+                    roleAccess: 100
                 }
             },
             {
@@ -24,7 +24,7 @@ const routes: Routes = [
                 component: LoginsComponent,
                 canActivate: [AuthGuard],
                 data: {
-                    roles: [Role.Admin]
+                    roleAccess: 100
                 }
             }
         ]
