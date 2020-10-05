@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
-   <div class="navbar-nav">
+	<div class="navbar-nav">
 		<a class="nav-item nav-link" routerLink="/">Home</a>
-      <a class="nav-item nav-link" routerLink="/admin/categories" *ngIf="isAdmin">Categori Admin</a>
-      <a class="nav-item nav-link" routerLink="/admin/logins" *ngIf="isAdmin">Login Admin</a>
-      <a class="nav-item nav-link pull-right" (click)="logout()" *ngIf="isLoggedIn">Logout</a>
-   </div>
+		<a class="nav-item nav-link" routerLink="/admin/categories" *ngIf="isAdmin">Categori Admin</a>
+		<a class="nav-item nav-link" routerLink="/admin/logins" *ngIf="isAdmin">Login Admin</a>
+		<a class="nav-item nav-link pull-right" (click)="logout()" *ngIf="isLoggedIn">Logout</a>
+	</div>
 </nav>
-
-<router-outlet></router-outlet>
+<section class="container">
+	<router-outlet></router-outlet>
+</section>
